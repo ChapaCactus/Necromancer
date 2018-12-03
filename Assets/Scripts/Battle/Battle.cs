@@ -13,6 +13,18 @@ namespace CCG
             {
                 GameManager.Initialize();
             }
+
+            // PlayerGameObject作成
+            NecromancerDTO necromancerDTO = GameManager.CharacterManager.Necromancer;
+            CreateNecromancerGO(necromancerDTO);
+        }
+
+        private void CreateNecromancerGO(NecromancerDTO dto)
+        {
+            Necromancer necromancer = new GameObject("Necromancer", typeof(Necromancer))
+                .GetComponent<Necromancer>();
+
+            necromancer.Setup(dto);
         }
     }
 }

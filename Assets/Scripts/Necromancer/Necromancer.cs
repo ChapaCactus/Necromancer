@@ -7,5 +7,9 @@ namespace CCG
 {
     public class Necromancer : MonoBehaviour
     {
+        public void Setup(NecromancerDTO dto)
+        {
+            
+        }
     }
 }
